@@ -20,8 +20,6 @@ for link in soup. find_all('a'):
     if "watch" in link.get('href'):
         if link.get('href') not in a:
             a.append(link.get('href'))
-#print (a)
-#exit(0)
 for m in a:
     driver.get(m)
     time.sleep(10)
@@ -32,8 +30,8 @@ for m in a:
     if f in page_source:
         x = page_source.find(f)+len(f)
         y = page_source.find('"',x)
-        s = "wget http://freemedtube.com/play.php?id=" + page_source[x:y] + " -o " + video_title+".mp4\n" 
-        print (s)
+        s = "curl -Ls -o " + video_title + ".mp4 -w %{url_effective} http://freemedtube.com/play.php?id=" + page_source[x:y] +"\n" 
+        print s
         fVideos.write(s)
 fVideos.close()
 driver.close()
