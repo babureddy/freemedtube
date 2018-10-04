@@ -12,3 +12,4 @@
 * python test.py
 * This will save the video links to videos.sh
 * run videos.sh at command prompt to download mp4 videos to your local drive
+* rerun the same by searching for 'becker' in freemedtube.com
