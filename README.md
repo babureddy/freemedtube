@@ -1,6 +1,6 @@
 # freemedtube
-Scrape usmle videos using python - selenium
-Install python 3.6
+* Scrape usmle videos using python - selenium
+* Install python 3.6
 pip install selenium 
 Install ChromeDriver
 Add ChromeDriver to PATH
